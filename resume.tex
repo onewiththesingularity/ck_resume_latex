@@ -1,5 +1,225 @@
-\documentclass{article}
+% Caitlin Kramer's super duper resume
 
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+  {\setlength{\leftmargin}{#1}}%
+  \item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+  {\setlength{\leftmargin}{-0.5#1}}%
+  \item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+  #1 &
+  #2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
 \begin{document}
+
+\begin{center}
+{\LARGE \textbf{Caitlin Kramer}}
+
+45 Cherokee Street Apt. 1\ \ \textbullet
+\ \ Boston, MA 02120
+\\
+(321) 266-6642\ \ \textbullet
+\ \ kramer.ca@husky.neu.edu
+\end{center}
+
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Education}
+
+\begin{itemize}
+  \parskip=0.1em
+
+  \item
+  \headerrow
+      {\textbf{Northeastern University}}
+      {\textbf{Boston, MA}}
+  \\
+  \headerrow
+      {\emph{College of Science, B.S./M.S. Chemistry}}
+      {\emph{2011 - 2016}}
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Experience}
+
+\begin{itemize}
+  \parskip=0.1em
+
+\item
+  \headerrow
+      {\textbf{DNA Damage Recognition and Tolerance Laboratory}}
+      {\textbf{Northeastern University}}
+  \\
+  \headerrow
+      {\emph{Undegraduate Researcher turned MS Student}}
+      {\emph{May 2012 -- Present}}
+    \begin{itemize*}
+    \item Led research on the uncharacterized \emph{E. coli}
+      DNA damage response gene \emph{ybfeE}. Developed
+      the protocols necessary for the expression and
+      purification of the protein, and confirmed a
+      computation prediction of DNA binding using
+      \emph{in vitro} methods. Structurally
+      characterized the protein using site-directed
+      mutagenesis, circular dichroism, and molecular
+      modeling (YASARA). Conducted \emph{in vivo} assays
+      to characterize the gene's role in regulation of
+      the DNA damage response, mutagenicity, and stress
+      response.
+    \item Investigated the putative Y-family DNA polymerase
+      DinB from \emph{S. meliloti} through expression in
+      \emph{E. coli}. Cloned gene into pET expression
+      vector and developed expression and purification
+      methods to troubleshoot problems with protein
+      solubility and acquire viable protein for
+      characterization. Assayed protein activity by
+      primer extension assays.
+    \item Prepared damaged DNA samples for LC-MS
+      characterization of adducts caused by
+      \emph{in vivo} vs. \emph{in vitro} by nitrofurazone and
+      benzyl bromide.
+    \item Mentored and trained undergraduate students in the
+      lab.
+    \end{itemize*}
+
+\item
+  \headerrow
+      {\textbf{InfoCommons Service Desk}}
+      {\textbf{Northeastern University}}
+  \\
+  \headerrow
+      {\emph{Student Staff}}
+      {\emph{September 2011 -- Present}}
+    \begin{itemize*}
+    \item Assist customers in person and on the phone with addressing
+      computer problems on personal and lab computers.
+    \item Keep printers and lab computers in working order.
+    \item Communicate with managers to provide the most up-to-date
+          information to customers and other staff.
+    \end{itemize*}
+
+\item
+  \headerrow
+      {\textbf{GlaxoSmithKline}}
+      {\textbf{Boston MDR}}
+  \\
+  \headerrow
+      {\emph{Library Chemistry Co-op}}
+      {\emph{January 2013 -- June 2013}}
+    \begin{itemize*}
+    \item Participated in development work, production, and quality
+      control of a 49 million member purine-scaffold library using
+      ELT (Encoded Library Technology).
+    \item Ensured general reaction scheme was valid prior to library
+      production.
+    \item Checked that litigation of DNA tags was not impeded by other
+      reactants.
+    \item Determined the scope of reactive chemical building blocks to
+      be used in production.
+    \end{itemize*}
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Skills and Qualifications}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+  \item[Chemical biology:]
+    PCR amplification and site-directed mutagenesis, molecular cloning,
+    gel electrophoresis, Western Blot, protein expression (including pET
+    system) and purification (AKTA Prime FPLC), primer extension
+  (\textsuperscript{32}P), differential scanning fluorimetry, DNA
+    purification, cell culture, sterile technique, bacterial
+    transformation
+  \item[Analytical:]
+    Circular dichroism, NMR, LC-MS, HPL, UV/Vis, IR, TLC
+  \item[Organic:]
+    Crystallization, separation, extraction, distillation, TLC,
+    anhydrous technique, synthesis, purification, characterization
+  \item[Computer:]
+    Linux, PC, Mac, Office suite, SQL, Racket, Python, emacs, tmux,
+    Pymol, YASARA
+\end{description*}
+\end{indentsection}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Conferences and Presentations}
+
+\begin{itemize}
+  \parskip=0.1em
+
+\item Matz Research Symposium \textbullet \ 2015. Given to Northeastern
+  alumni, faculty and students.
+\item ASBMB \textbullet \ 2015 Annual Meeting \textbullet \ Boston.
+  Presented poster: ``Expression and purification of
+  putative Y-family polymerase DinB from \emph{Sinorhizobium meliloti}''
+\item ASBMB \textbullet \ 2016 Annual Meeting \textbullet \ San Diego.
+  Presenting poster: ``Characterization of the \emph{E. coli} SOS
+  response protein YbfE''
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Awards}
+
+\begin{itemize}
+  \parskip=0.1em
+
+\item Matz Research Scholarship \textbullet \ 2014. Competitive grant
+  given to undergraduates used to fun 6 month full-time research co-op.
+\item Provost Thesis Grant \textbullet \ 2015 Funding awarded
+  selectively to graduate students based on written proposals.
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Affiliations}
+
+\begin{itemize}
+  \parskip=0.1em
+
+\item American Chemical Society, since 2015
+\item American Society for Biochmeistry and Molecular Biology, since
+  2015.
+
+\end{itemize}
 
 \end{document}
